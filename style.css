@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face{
+    font-family: IDroid;
+    src: url('fontes/IDroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/* VARIÁVEIS */
+
+:root{
+    --fonte0: 'Bebas Neue', 'cursive';
+    --fonte1: 'IDroid', sans-serif;
+    --fonte2: Arial, Helvetica, sans-serif;
+
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #063d1e;
+    --cor5: #1a5c37;
+}
+
+/*------------------------------------------------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte2);
+    line-height: 1.8em;
+}
+
+body{
+    background-color: #EBE5C5;
+}
+
+/*------------------------------------------------------------------------------*/
+/* CABEÇALHO */
+
+header{
+    background-image: linear-gradient(to top, var(--cor4), var(--cor3));
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.377);
+    min-width: 400px;
+}
+
+header > h1{
+    font-family: var(--fonte0);
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    font-size: 48px;
+    font-weight: lighter;
+    text-shadow: 2px 2px 3px var(--cor4);
+}
+header > p{
+    max-width: 590px;
+    margin: auto;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 19px;
+    text-shadow: 2px 2px 2px var(--cor4);
+}
+
+nav{
+    padding: 10px 0px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--cor1);
+    font-weight: bold;
+    margin-left: 2px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover{
+    background-color: var(--cor3);
+    color: var(--cor4);
+    transition: 0.9s;
+}
+
+/*------------------------------------------------------------------------------*/
+/* CORPO */
+
+main{
+    background-color: white;
+    margin: auto;
+    max-width: 1000px;
+    min-width: 400px;
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.377);
+}
+main p{
+    text-indent: 30px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+article{
+    padding: 25px 15px 25px 15px;
+}
+
+article strong{
+    color: var(--cor5);
+    font-style: bold;
+}
+
+article a{
+    text-decoration: none;
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+article a::after{
+    content: '\1F517';
+}
+
+article a:hover{
+    text-decoration: underline;
+    color: var(--cor5);
+}
+
+.titulo-principal{
+    font-family: var(--fonte1);
+    color: var(--cor4);
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitulo{
+    font-family: var(--fonte1);
+    color: #085a2c;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px 20px 0px;
+    background-image: linear-gradient(to right, var(--cor1), var(--cor0));
+}
+
+picture > img{
+    width: 100%;
+    margin-top: 15px;
+    margin: auto;
+}
+
+.bugdroid{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.video{
+    position: relative;
+    background-color: var(--cor4);
+    min-height: 400px;
+    margin-top: 15px;
+    margin-left: -16px;
+    margin-right: -15px;
+    margin-bottom: 15px;
+}
+
+.video > iframe{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+}
+
+/*------------------------------------------------------------------------------*/
+/* EXTRA */
+
+aside{
+    background-color: var(--cor1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 10px var(--cor4);
+}
+aside > p{
+    padding: 10px;
+}
+
+aside> p:first-child{
+    background-color: var(--cor5);
+    color: white;
+    padding: 5px 0px;
+    text-indent: none;
+    font-size: 18px;
+    font-weight: bold; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/*------------------------------------------------------------------------------*/
+/* LISTA */
+
+    ul{
+        list-style-type: none;
+        columns: 2;
+        list-style-position: inside;
+        padding-left: 15px;
+    }
+
+    li::before{
+        content: '\2714\a0';
+        color: var(--cor4);
+    }
+
+    li abbr{
+        text-decoration: underline;
+    }
+
+/*------------------------------------------------------------------------------*/
+/* RODAPÉ */
+
+footer{
+    background-color: var(--cor4);
+    color: white;
+    margin-top: 20px;
+    font-size: 13px;
+    text-align: center;
+    padding: 2px;
+    min-width: 400px;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--cor0);
+    font-weight: bold;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+@media(max-width: 412px){
+
+    nav a:last-child{
+        display: none;
+    }
+}
